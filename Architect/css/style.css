@@ -1,0 +1,207 @@
+/* CSS Variables */
+:root{
+    --faded: rgb(161, 159, 159);
+    --hover: rgb(226, 223, 223);
+    --font: 'Cairo', sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+/* Wrapper */
+.wrapper{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box  ;
+}
+/* Navigation Bar */
+.main-nav{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    font-family: 'Cairo', sans-serif;
+    font-weight:600;
+    background-color: white;
+    position: fixed;
+}
+.logo{
+    margin-left: 1rem;
+    display: flex;
+    font-weight: 900;
+    /* justify-content: center; */
+    align-items: center;
+}
+.logo p{
+    padding: 1rem;
+}
+.logo p:hover{
+    background-color: var(--hover);
+    cursor: pointer;
+}
+.navigation-links{
+    margin-left: 7rem;
+}
+.navigation-links ul{
+    list-style-type: none;
+}
+.navigation-links ul li{
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+}
+.navigation-links ul li:hover{
+    background-color: var(--hover);
+}
+.navigation-links ul li a{
+    text-decoration:none;
+    color: black;
+}
+
+.main-nav + .container{
+    padding: 10px;
+}
+
+/* top container */
+.top-container{
+    display: flex;
+    background: url('../img/bg.jpg');
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.top-txt{
+    color: black;
+    font-size: 100px;
+    font-family: var(--font);
+}
+.top-txt b{
+    color: white;
+    padding: 0rem 1.5rem;
+    background: rgb(19, 18, 18);
+}
+
+/* Top Container Ends */
+.projects h2{
+    font-family: var(--font);
+}
+
+.portfolio{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    margin-left: 1rem;
+}
+.portfolio .image1{
+    position: relative;
+    width: 300px 300px;
+}
+
+.portfolio .image1 p{
+    margin: 0;
+    font-family: var(--font);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+.portfolio .image1 img{
+    width: 100%;
+}
+/* Projects Ends */
+
+/* About */
+.about{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    'abt-txt abt-txt abt-txt abt-txt'
+    'abt-arc abt-arc abt-arc abt-arc';
+}
+
+#abt-text{
+    grid-area: abt-txt;
+    font-family: var(--font);
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+.abt-architects{
+    grid-area: abt-arc;
+    margin-top: 1rem;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.architects h2{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.architects h3{
+    font-family: var(--font);
+}
+.architects img{
+    width: 100%;
+}
+.architects .btn{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+    text-decoration: none;
+    background-color: rgb(238, 238, 238);
+    width: 100%;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-family: var(--font);
+    font-weight: 900;
+    border: none;
+}
+.architects .btn:hover{
+    background-color: var(--hover);
+}
+
+/* Contact */
+.contact{
+    margin-left: 0.5rem;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-form input[type='text'],
+.contact-form input[type='email']{
+    display: block;
+    width: 99%;
+    padding: 1rem 0 0.5rem 1rem;
+    border: 0.5px solid var(--faded);
+    border-radius: 2px;
+    margin-bottom: 0.8rem;
+}
+.contact-form input[type='submit']{
+    width: 20%;
+    padding: 0.8rem;
+    background: black;
+    font-size: 1rem;
+    color: white;
+    text-transform: capitalize;
+    margin: 1rem 0rem;
+}
+
+/* last image */
+
+.last-img{
+    margin: 1rem 0rem;
+}
+
+/* footer */
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 1.5rem;
+}
+/* Media Queries */

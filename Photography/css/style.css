@@ -1,0 +1,370 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'KoHo', sans-serif;
+}
+
+/* Navigation Bar */
+
+.navbar{
+    background-color: white;
+    /* background-color: transparent; */
+    display: flex;
+    width: 100%;
+    position: fixed;
+    font-weight: 900;
+    z-index: 1;
+}
+.nav-links{
+    width: 80vw;
+    display: flex;
+}
+.links{
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+}
+.links:hover{
+    cursor: pointer;
+    background-color: rgb(238, 237, 234);
+}
+.search{
+    display: flex;
+    width: 20vw;
+    justify-content: flex-end;
+    align-items: center;
+}
+.search i{
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+.navbar .search i:hover{
+    cursor: pointer;
+    background-color: red;
+}
+/* top image */
+
+.image{
+    background-image: url('../img/top.jpg');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    /* opacity: 0.6; */
+    background-attachment: fixed;
+    opacity: 0.9;
+    z-index: -1;
+}
+.navbar + .image{
+    padding: 20px;
+}
+.image img{
+    position: relative;
+}
+.image h1{
+    color: white;
+    width: 400px;
+    /* margin-top: 200px;
+    margin-left: 500px; */
+    text-align: center;
+    background-color: black;
+    padding: 1rem;
+    text-transform: uppercase;
+    word-spacing: 0.5rem;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+/* About Me */
+.abt{
+    opacity: 0.8;
+    width: 70%;
+    margin: 1rem 15rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    'text1 text1 text1'
+    'pic pic text2'
+    'text3 text3 text3'
+    'progres progres progres';
+}
+.abt .text1{
+    /* border: 2px solid red; */
+    text-align: center;
+    grid-area: text1;
+}
+.abt .text1 h2{
+    text-transform: uppercase;
+}
+.abt .text1 h4{
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+.abt .profile-pic{
+    grid-area: pic;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    /* border: 2px solid black; */
+    justify-content: center;
+    align-items: center;
+}
+.abt .profile-pic i{
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+#profile-img{
+    border: hidden;
+    opacity: 0.8;
+}
+#profile-img:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.abt .text2{
+    grid-area: text2;
+    word-wrap: break-word;
+    /* border: 2px solid blue; */
+}
+
+.text3{
+    grid-area: text3;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin: 1rem 0rem;
+}
+.progres{
+    opacity: 0.8;
+    width: 100%;
+    grid-area: progres;
+}
+.progres .fields {
+    margin: 1rem 0 3rem 0rem;
+}
+.progres .fields i{
+    /* margin: 1rem 0 2rem 0.3rem; */
+    /* font-weight: lighter; */
+    letter-spacing: 0.5rem;
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0.4rem;
+}
+
+.progress{
+    display: grid;
+    grid-template-columns: 3fr,1fr;
+    background-color: rgb(202, 199, 199);
+}
+
+.progress #fill90{
+    background: rgb(73, 73, 73);
+    width: 90%;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    /* border: 2px solid blue;*/
+}
+.progress #fill75{
+    background: rgb(73, 73, 73);
+    width: 75%;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    /* border: 2px solid blue;*/
+}
+.progress #fill60{
+    background: rgb(73, 73, 73);
+    width: 60%;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    /* border: 2px solid blue;*/
+}
+/* progress bar could've been done with using javascript but i'm learning css that's why i haven't done it yet, maybe in future i'll edit it */
+
+/*projects */
+.projects{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: rgb(56, 56, 56);
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+/* after project image */
+.project-image{
+    background-image: url("../img/bg1.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+}
+.portfolio-whole{
+    display: grid;
+    grid-template-areas: 
+    'txt txt txt txt'
+    'portfolio portfolio portfolio portfolio'
+    'button button button button';
+}
+.portfolio-text{
+    grid-area: txt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+}
+.portfolio-text h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.portfolio-text p{
+    margin: 0.5rem 0 0 0;
+    font-style: italic;
+    font-weight: 600;
+}
+.portfolio{
+    grid-area: portfolio;
+    margin: 2rem 20%;
+    display: grid;
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+}
+
+.portfolio img{
+    width: 100%;
+}
+.portfolio img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.portfolio-whole .button{
+    margin-bottom: 1rem;
+    grid-area: button;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#btn{
+    background-color: rgb(221, 218, 218);
+    padding: 0.6rem 1rem;
+    border: none;
+    font-size: 1.3rem;
+    color: rgb(107, 106, 106);
+    border-radius: 3px;
+}
+#btn:hover{
+    background-color: rgb(211, 209, 209);
+    cursor: pointer;
+}
+
+/* Contact */
+
+.contact{
+    display: flex;
+    background-image: url("../img/contact.jpg");
+    width: 100%;
+    color: white;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+/* Contact Form */
+.contact-container{
+    width: 90%;
+    display: grid;
+    grid-template-areas: 
+    'txt txt'
+    'img loctxt'
+    'img form';
+    grid-gap: 1rem;
+    margin: 2rem 4rem;
+}
+
+.text{
+    grid-area: txt;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.text h2{
+    text-transform: uppercase;
+}
+.text p{
+    font-style: italic;
+    text-transform: capitalize;
+}
+.left-img{
+    grid-area: img;
+    margin-left: 50%;
+}
+.left-img img{
+    height: 400px;
+}
+.loc-txt{
+    opacity: 0.6;
+}
+.loc-txt:hover{
+    grid-area: loctxt;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.contact-form{
+    grid-area: form;
+}
+.contact-form input{
+    padding: 0.4rem;
+    width: 40%;
+}
+.contact-form input[value='Message']{
+    width: 80.5%;
+}
+.contact-form input[type='submit']{
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 0 40%;
+}
+
+.contact-form input[type='submit']:hover{
+    cursor: pointer;
+    background-color: rgb(37, 37, 37);
+}
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 150px;
+}
+footer button{
+    background-color: rgb(187, 182, 182);
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+footer button:hover{
+    cursor: pointer;
+    background-color: rgb(223, 219, 219);;
+}
