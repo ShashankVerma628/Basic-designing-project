@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
     <!-- Style Sheet -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,8 +27,8 @@
                     <p>Verma au Catering</p>
                 </div>
                 <div class="nav-button">
-                    <button id="dark" class="bg-change">Dark Theme</button>
-                    <button id="multi" class="bg-change">MultiColor</button>
+                    <button id="dark" class="bg-change">Dark</button>
+                    <button id="multi" class="bg-change">Multi</button>
                     <button id="auto" class="bg-change">Auto</button>
                 </div>
                 <div class="nav-links">
@@ -36,7 +38,7 @@
                         <li><button id="auto" class="bg-change">Auto</button></li> -->
                         <li><a class="nav-link" href="#">Home</a></li>
                         <li><a class="nav-link" href="#">Menu</a></li>
-                        <li><a class="nav-link" href="#">Contact</a></li>
+                        <li><a class="nav-link" type="button" id="contact-btn">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -93,32 +95,33 @@
                     <img src="img/salad.jpg" alt="">
                 </div>
             </div>
+            <footer>
+                &copy; Verma au Caterers | All Rights Reserved
+            </footer>
 
-            <div class="contact">
-                <div class="contact-txt">
-                    <h3>Contact</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nesciunt alias nam vero vitae
-                        officiis
-                        modi et nemo eveniet odio.</p>
-                </div>
-
-                <!-- contact form -->
-
-                <div class="contact-form">
-                    <form action="#">
-                        <input type="text" placeholder="Name" class="faded_txt">
-                        <input type="text" placeholder="How many people" class="faded_txt">
-                        <input type="date" placeholder="Venue Date" class="faded_txt">
-                        <textarea name="msg" id="" cols="30" rows="6" placeholder="Message"
-                            class="faded_txt"></textarea>
-                        <input type="submit" value="Send">
-                    </form>
-                </div>
-            </div>
         </div>
-        <footer>
-            &copy; Verma au Caterers | All Rights Reserved
-        </footer>
+    </div>
+    <div class="modal-overlay">
+        <div class="contact">
+            <div class="contact-txt">
+                <h3>Contact</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nesciunt alias nam vero vitae
+                    officiis
+                    modi et nemo eveniet odio.</p>
+            </div>
+
+            <!-- contact form -->
+            <div class="contact-form">
+                <form action="#">
+                    <input type="text" placeholder="Name" class="faded_txt">
+                    <input type="text" placeholder="How many people" class="faded_txt">
+                    <input type="date" placeholder="Venue Date" class="faded_txt">
+                    <textarea name="msg" id="" cols="30" rows="6" placeholder="Message" class="faded_txt"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+            <button id="close-btn"><i class="fas fa-times"></i></button>
+        </div>
     </div>
     <!-- JavaScript -->
     <script src="js/app.js"></script>

@@ -8,6 +8,12 @@ body{
     font-family: 'KoHo', sans-serif;
 }
 
+img{
+    max-width: 100%;
+}
+.wrapper{
+    width: 100%;
+}
 /* Navigation Bar */
 
 .navbar{
@@ -91,6 +97,7 @@ body{
     'text3 text3 text3'
     'progres progres progres';
 }
+
 .abt .text1{
     /* border: 2px solid red; */
     text-align: center;
@@ -368,3 +375,5 @@ footer button:hover{
     cursor: pointer;
     background-color: rgb(223, 219, 219);;
 }
+
+

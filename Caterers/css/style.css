@@ -1,22 +1,28 @@
 /* CSS Variables */
-:root{
+
+:root {
     --faded: rgb(99, 97, 97);
     --font: 'Barlow', sans-serif;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 /* Wrapper class */
-.wrapper{
+
+.wrapper {
     box-sizing: border-box;
 }
+
 /* Navigation Bar */
-.bg-change{
+
+.bg-change {
     padding: 0.5em;
     background-color: white;
     color: black;
@@ -26,12 +32,14 @@ html{
     font-family: var(--font);
     transition: all 0.3s linear;
 }
-.bg-change:hover{
+
+.bg-change:hover {
     color: white;
     background-color: black;
     cursor: pointer;
     border: 1px solid black;
 }
+
 /* #multi{
     padding: 0.5em;
     background-color: white;
@@ -48,7 +56,8 @@ html{
     cursor: pointer;
     border: 1px solid black;
 } */
-.main-nav{
+
+.main-nav {
     margin: 0;
     background-color: white;
     position: fixed;
@@ -57,45 +66,68 @@ html{
     align-items: center;
     width: 100%;
 }
-.nav-button{
+
+.nav-button {
     /* margin: 1em 0; */
+    display: flex;
+    justify-content: space-between;
 }
-.nav-txt{
+
+.nav-button button {
+    margin: 0 0.4em;
+    border: none;
+    background-color: rgb(207, 206, 206);
+    padding: 0.5em 1em;
+}
+
+.nav-button:last-child {
+    margin: none;
+}
+
+.nav-txt {
     float: left;
     padding: 0 0 0 1em;
     font-size: 1.5rem;
 }
-.nav-links{
+
+.nav-links {
     float: right;
     margin-right: 2em;
     margin-left: 1em;
 }
-.nav-links ul{
+
+.nav-links ul {
     list-style: none;
 }
-.nav-links ul li{
+
+.nav-links ul li {
     padding: 0rem 0.8rem 0.4rem 0.2rem;
     display: inline-block;
 }
-.nav-links ul li a{
+
+.nav-links ul li a {
     font-size: 1.5rem;
     text-decoration: none;
     color: black;
 }
-.nav-links ul li a:hover{
+
+.nav-links ul li a:hover {
     color: var(--faded);
 }
-.main-nav+.container{
+
+.main-nav+.container {
     padding: 10px;
 }
-@media (max-width: 700px){
+
+/* @media (max-width: 700px){
     nav{
         text-align: center;
     };
-}
+} */
+
 /* Top Container */
 
-.top-container{
+.top-container {
     display: grid;
     grid-template-columns: 1fr;
     color: white;
@@ -108,75 +140,79 @@ html{
 }
 
 /* Second Box */
-.second-box{
+
+.second-box {
     margin-top: 4rem;
     margin-bottom: 5rem;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
 }
-.second-box-a img{
+
+.second-box-a img {
     width: 80%;
     height: 600px;
     float: right;
     padding-right: 3rem;
     border-radius: 5px;
 }
-.second-box-a{
+
+.second-box-a {
     font-family: 'Barlow', sans-serif;
 }
-.second-box-b{
+
+.second-box-b {
     font-family: 'Barlow', sans-serif;
     float: left;
 }
-.second-box-b h2{
+
+.second-box-b h2 {
     margin-left: 35%;
 }
-.second-box-b h3{
+
+.second-box-b h3 {
     margin-left: 35%;
     word-spacing: 0.5rem;
 }
 
 /* Third Box */
 
-.third-box{
+.third-box {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
 }
 
-.third-box-a{
+.third-box-a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Barlow', sans-serif;
 }
-.third-box-a h3{
+
+.third-box-a h3 {
     margin-left: 7rem;
 }
-.third-box-b img{
+
+.third-box-b img {
     width: 90%;
     border-radius: 10px;
 }
 
 /* Contact */
-.contact{
-    font-family: 'Barlow', sans-serif;
-    width: 60%;
-    margin: auto; 
-    margin-top: 5rem; 
-}
-.contact-txt h3{
+
+/* .contact-txt h3 {
     font-family: 'Barlow', sans-serif;
     display: block;
     width: auto;
     margin-left: auto;
     font-size: 2rem;
-}
-.contact-form input,textarea{
+} */
+
+.contact-form input, textarea {
     display: block;
     width: 100%;
     padding: 0.5rem;
@@ -184,43 +220,106 @@ html{
     margin: 1rem;
     border-bottom: 1px dashed black;
 }
-.contact-form input[type=submit]{
-    border:none;
-    cursor:pointer;
+
+.contact-form input[type=submit] {
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
-.contact-form input[type=submit]:hover{
-    background-color:#444;
+
+.contact-form input[type=submit]:hover {
+    background-color: #444;
     color: white;
 }
 
+.modal-overlay{
+    visibility: hidden;
+    z-index: -99;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    font-family: 'Barlow', sans-serif;
+    height: 100%;
+    background-color: transparent;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s linear;
+    /* background-color: rgb(210, 241, 252); */
+}
+.contact{
+    width: 90%;
+    height: 90%;
+    font-weight: bold;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: relative;
+    background-image: url("../img/modal_image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: white; */
+}
+.show-contact{
+    z-index: 99;
+    visibility: visible;
+}
+#close-btn{
+    position: absolute;
+    top: 0;
+    right: 0em;
+    border: none;
+    background-color: transparent;
+    color: red;
+    font-size: 2rem;
+}
+#close-btn:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+#contact-btn{
+    cursor: pointer;
+}
 /* Footer */
-footer{
+
+footer {
     background-color: var(--faded);
     color: white;
     text-align: center;
 }
 
 /* Media Queries */
-@media only screen and (max-width:700px){
-    .main-nav{
+
+@media only screen and (max-width:815px) {
+    .main-nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .top-container img{
+    .top-container img {
         width: 700px;
     }
-    .second-box{
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    .second-box {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    .third-box{
-        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    .third-box {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .nav-button {
+        flex-direction: column;
+    }
+    .nav-button button {
+        margin-bottom: 0.3em;
     }
 }
 
-@media only screen and (max-width: 510px){
-    .nav-links ul{
+@media only screen and (max-width: 510px) {
+    .nav-links ul {
         display: flex;
+        flex-direction: column;
+    }
+    .nav-button {
         flex-direction: column;
     }
 }

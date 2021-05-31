@@ -95,3 +95,20 @@ btn2.addEventListener('click', function () {
         }
     }
 });
+
+
+// ===============
+// Contact Form
+// ==============
+
+const contactLink = document.getElementById("contact-btn");
+const modal = document.querySelector(".modal-overlay");
+const closeBtn = document.getElementById("close-btn");
+
+contactLink.addEventListener("click",function(){
+    modal.classList.add('show-contact');
+});
+
+closeBtn.addEventListener("click",function(){
+    modal.classList.remove('show-contact');
+});
