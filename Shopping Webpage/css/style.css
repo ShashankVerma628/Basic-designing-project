@@ -62,7 +62,7 @@ header{
 
 #cross-btn{
     color: red;
-    margin-right: 0.5em;
+    padding-right: 0.5em;
     float: right;
 }
 /* Menu */
@@ -236,7 +236,21 @@ main{
     margin-top: 1em;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 1em;
+    grid-gap: 3em;
+}
+.contents p{
+    color: grey;
+    letter-spacing: 0.2rem;
+}
+.contents .price{
+    font-weight: bold;
+    color: black;
+    font-family: var(--links);
+}
+.contents img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 @media(min-width: 900px){
     main{
@@ -247,6 +261,14 @@ main{
     }
     .contents{
         grid-template-columns: repeat(4,1fr);
+        grid-gap: 3em;
     }
 }
+/* subscribe form */
 
+.subscribe{
+    background-color: black;
+    color: white;
+    width: 100%;
+    /* height: 300px; */
+}
