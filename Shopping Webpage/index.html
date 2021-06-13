@@ -54,15 +54,64 @@
             <div class="contact">
                 <ul>
                     <li>Contact</li>
-                    <li>Newsletter</li>
+                    <li id="newsletter">Newsletter</li>
                     <li>Subscribe</li>
                 </ul>
             </div>
         </aside>
+        <!-- Newsletter Modal Starts-->
+        <div class="modal-overlay">
+            <div class="modal-container">
+                <i class="fas fa-times fa-2x" id="newsletter-cross-btn"></i>
+                <h1>newsletter</h1>
+                <h2>Join our mailing list to receive latest updates on new products</h2>
+                <div class="newsletter-form-container">
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <br>
+                    <button type="submit" id="newsletter-submit-button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter Modal Ends -->
         <!-- sidebar Ends -->
+        <!-- main container starts -->
         <main>
-
+            <div class="main-header">
+                <div class="main-header-heading">
+                    <h2>Jeans</h2>
+                </div>
+                <div class="main-header-svg">
+                    <i class="fas fa-shopping-cart fa-2x"></i>
+                    <i class="fas fa-search fa-2x"></i>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="img-container">
+                    <div class="img-text">
+                        <h1>New arrivals</h1>
+                        <h2>collection 2016</h2>
+                        <button>shop now</button>
+                    </div>
+                </div>
+                <div class="contents">
+                    <!-- single post starts -->
+                    <div class="content">
+                        <img src="img/jeans.jpg" alt="">
+                        <p>Ripped Jeans</p>
+                        <p class="price">$24.99</p>
+                    </div>
+                    <!-- single post ends -->
+                    <!-- single post starts -->
+                    <div class="content">
+                        <img src="img/jeans.jpg" alt="">
+                        <p>Ripped Jeans</p>
+                        <p class="price">$24.99</p>
+                    </div>
+                    <!-- single post ends -->
+                </div>
+            </div>
         </main>
+        <!-- main container ends  -->
     </div>
     <!-- JS file -->
     <script src="js/app.js"></script>
