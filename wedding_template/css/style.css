@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Typography */
+
+/* global */
+
+a {
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+}
+
+.image-container {
+    background-image: url("../img/bg.jpg");
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* word-wrap: break-word; */
+    flex-wrap: wrap;
+}
+
+.img-text {
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.img-text h1 {
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.img-text h3 {
+    font-size: 2rem;
+}
+
+.img-text h2 {
+    font-size: 2.2rem;
+}
+
+@media(max-width: 575px) {
+    .img-text h1 {
+        font-size: 2.5rem;
+    }
+    .img-text h2 {
+        font-size: 1.8rem;
+    }
+    .img-text h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* invitation  */
+
+.invitation {
+    background-color: rgb(248, 232, 235);
+    padding: 2em 0;
+}
+
+.invitation-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.invitation-container h1 {
+    text-align: center;
+    margin: 0.5em;
+    font-family: 'Roboto Mono', monospace;
+    color: grey;
+}
+
+.invitation-img-text {
+    word-wrap: break-word;
+    margin: 1em 0;
+}
+
+.invitation-img-text p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    color: grey;
+}
+
+.invitation-container img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.details-btn-container {
+    margin: 1em auto;
+}
+
+.details-btn {
+    padding: 1em;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    transition: all 0.3s linear;
+}
+
+.details-btn:hover {
+    background-color: rgb(65, 65, 65);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+@media(max-width: 575px) {
+    .invitation-container {
+        width: 95%;
+    }
+    .inviation-container img {
+        height: auto;
+    }
+}
+
+/* invitation image */
+
+.invitation-image {
+    background-image: url("../img/bg2.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.text {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 2rem;
+}
+
+.text p {
+    font-size: 1.5rem;
+}
+
+/* venue */
+
+.venue-text{
+    margin-top: 2em;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.venue-text-child{
+    text-align: center;
+    color: grey;
+    font-family: 'Roboto Mono',sans-serif;
+}
+.venue-text-child h2{
+    margin-bottom: 0.5em;
+}
+.venue-text-child h3{
+    margin-bottom: 0.5em;
+}
+@media(max-width: 575px){
+    .venue-text{
+        flex-direction: column;
+    }
+    .venue-text-child{
+        margin-bottom: 2em;
+    }
+}
+
+/* RSVP */
+
+.rsvp-container{
+    width: 100%;
+    background-color: pink;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Slab',monospace;
+    font-weight: lighter;
+}
+.rsvp-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1em;
+}
+.rsvp-text button{
+    margin: auto;
+    width: 50%;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(255, 58, 91);
+    font-family: 'Roboto Mono',sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    transition: all 0.4s linear;
+}
+.rsvp-text button:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+    background-color: rgb(252, 92, 118);
+}
+/* Navigation */
+
+footer {
+    margin-bottom: 2em;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    font-family: 'Roboto Mono',monospace;
+}
+
+.navigation {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.navigation ul {
+    display: flex;
+    list-style-type: none;
+    line-height: 2em;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    justify-content: space-around;
+}
+
+.navigation li {
+    margin: 0.2em 0;
+    padding: 0 5em;
+    display: flex;
+    justify-content: center;
+    max-width: 5%;
+}
+
+.navigation li:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.navigation ul a {
+    text-decoration: none;
+}
+
+#toggle-btn {
+    display: none;
+}
+
+@media(max-width: 575px) {
+    .navigation ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    #toggle-btn {
+        display: block;
+        float: right;
+        margin: 0 0.2em;
+        color: black;
+    }
+    .hide {
+        display: none;
+    }
+    .display {
+        display: block;
+    }
+    .navigation ul li {
+        display: flex;
+        border-bottom: 1px dotted grey;
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+
+/* RSVP Modal */
+
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    z-index: -100;
+}
+.modal-overlay-show{
+    visibility: visible;
+    z-index: 100;
+}
+.modal-container{
+    width: 50%;
+    height: auto;
+    padding: 2em;
+    border: 1px solid white;
+    background-color:white;
+    font-family: 'Roboto Mono',monospace;
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(auto,1fr);
+    row-gap: 1em;
+}
+.modal-container input{
+    width: 80%;
+    padding: 0.4em 0;
+    border: 0.5px solid grey;
+}
+.form-submit-btn{
+    display: flex;
+    width: 100%;
+}
+.modal-container button{
+    width: 100%;
+    padding: 0.8em;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+.going{
+    background-color: rgb(4, 165, 4);
+}
+.going:hover{
+    background-color: rgb(11, 221, 11);
+    cursor: pointer;
+}
+.not{
+    background-color: red;
+}
+.not:hover{
+    background-color: rgb(252, 63, 63);
+    cursor: pointer;
+}
+.modal-container h1{
+    text-transform: uppercase;
+}
+
+@media(max-width: 575px){
+    .form-submit-btn{
+        flex-direction: column;
+    }
+}
