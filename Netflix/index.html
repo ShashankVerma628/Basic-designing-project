@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home|Netflix Landing Page</title>
+    <title>Netflix | Landing Page</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <header>
+            <nav id="navbar">
+                <div class="logo-container">
+                    <img src="img/logo (1).png" alt="Netflix" class="logo">
+                </div>
+                <div class="sign-in-btn-container">
+                    <a href="#" class="btn sign-in-btn">Sign In</a>
+                </div>
+            </nav>
+        </header>
+        <div class="showcase">
+            <h1>See what's next</h1>
+            <h3>watch anywhere. cancel anytime</h3>
+            <a href="#" class="main-btn btn">watch free for 30 days <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <section class="tabs">
+        <div class="tab-container">
+            <div class="tab-item tab-border" id="tab-1">
+                <i class="fas fa-door-open fa-3x"></i>
+                <p class="hide-sm">Cancel anytime</p>
+            </div>
+            <div class="tab-item" id="tab-2">
+                <i class="fas fa-tablet-alt fa-3x"></i>
+                <p class="hide-sm">Watch anywhere</p>
+            </div>
+            <div class="tab-item" id="tab-3">
+                <i class="fas fa-tags fa-3x"></i>
+                <p class="hide-sm">Pixk your price</p>
+            </div>
+        </div>
+    </section>
+    <section class="tab-content-container">
+        <div id="tab-1-content show">
+            <div class="data">
+                <h2>If you decide Netflix isn't for you - no problem. No Commitment. Cancel online anytime.</h2>
+                <a href="#" class="btn main-btn">Watch Free For 30 Days</a>
+            </div>
+            <div class="img">
+                <img src="img/tab-content-1.png" alt="Cancel Subscription Image">
+            </div>
+        </div>
+        <div id="tab-2-content">
+            <div class="data">
+                <h2>If you decide Netflix isn't for you - no problem. No Commitment. Cancel online anytime.</h2>
+                <a href="#" class="btn main-btn">Watch Free For 30 Days</a>
+        </div>
+        <div class="image-display-container">
+            <div class="image">
+                <img src="img/tab-content-2-1.png" alt="Watch on TV">
+                <h3>Watch on Your TV</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, voluptas?</p>
+            </div>
+            <div class="image">
+                <img src="img/tab-content-2-2.png" alt="Watch online">
+                <h3>Watch instantly or download for later</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, voluptas?</p>
+            </div>
+            <div class="image">
+                <img src="img/tab-content-2-3.png" alt="Use computer">
+                <h3>Use any computer</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, voluptas?</p>
+            </div>
+        </div>
+    </section>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/280a86b751.js" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
